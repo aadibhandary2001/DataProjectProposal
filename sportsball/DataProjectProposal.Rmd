@@ -1,0 +1,52 @@
+---
+title: "Data Project Proposal"
+author: "Aadi Bhandary"
+date: "2024-11-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**1. The names of the students who will be contributing to the group project.**
+
+Aadi Bhandary, Alvin Do, Milan Patel 
+
+
+**2. A tentative title for the project. **
+
+"Modeling Probability of Getting a Medal at the Olympics Based On Athlete Characteristics"
+
+**3. Description of the data file (what they contain including number of variables and number of records). You do not necessarily have to list all the variables, but at least mention those of greatest importance.**
+
+-This dataset has 271,116 records and 15 variables. 
+
+-Some of the important variables are: Sex, Age, Height, Weight, Sport, Season 
+
+**4. Background information on the data sets, including specific citation of their source (so that I can also access it).**
+
+-https://www.kaggle.com/datasets/heesoo37/120-years-of-olympic-history-athletes-and-results 
+
+-This dataset was sourced from Kaggle. It is a compilation of historical Olympic data. 
+
+-It can be used to analyze athletic performance and any relationships to athlete characteristics.
+
+**5. A brief statement of the business, science, research, or personal interest you have in the data set which you hope to explore.**
+
+- All of us have a general interest in sports (Baseball, Football, and Basketball). This data set is neutral among us three.  
+
+ 
+
+- We are going to focus on: Designing a binary classifier (Medal or No medal) as well as predicting multiple outcomes (Gold, Bronze, Silver).  
+
+-The data set spans 120 years, which allows us to see how the factors that play into earning a medal change over time.
+
+**6. Evidence that the data can be loaded into R. Load the data, and print the first few values of the response variable as evidence. **
+
+```{r}
+library(readr)
+
+dat = read.csv("./athlete_events.csv")
+head(dat)
+```
